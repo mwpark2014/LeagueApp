@@ -14,13 +14,13 @@ import com.example.leagueapp.R
 class HomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?
                               , savedInstanceState: Bundle?): View? {
-        val rootView = inflater!!.inflate(R.layout.home_fragment, container, false)
+        val rootView = inflater.inflate(R.layout.home_fragment, container, false)
         rootView.tag = TAG
 
         return rootView
     }
     companion object{
-        private val TAG = "HomeFragment"
+        val TAG = "HomeFragment"
         @JvmStatic fun newInstance(): HomeFragment {
            return HomeFragment()
         }

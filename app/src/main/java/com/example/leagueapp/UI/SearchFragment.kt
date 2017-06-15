@@ -14,13 +14,13 @@ import com.example.leagueapp.R
 class SearchFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?
                               , savedInstanceState: Bundle?): View? {
-        val rootView = inflater!!.inflate(R.layout.search_fragment, container, false)
+        val rootView = inflater.inflate(R.layout.search_fragment, container, false)
         rootView.tag = TAG
 
         return rootView
     }
     companion object{
-        private val TAG = "SearchFragment"
+        val TAG = "SearchFragment"
         @JvmStatic fun newInstance(): SearchFragment {
            return SearchFragment()
         }

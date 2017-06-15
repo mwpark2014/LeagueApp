@@ -5,13 +5,12 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.internal.BottomNavigationItemView
-import android.support.design.internal.BottomNavigationMenu
 import android.support.design.internal.BottomNavigationMenuView
 import android.util.Log
 
 import com.example.leagueapp.R
+import com.example.leagueapp.R.id.navigation
 import java.lang.reflect.Field
-import kotlin.reflect.KClass
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,8 +18,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val addHomeTrans = fragmentManager.beginTransaction()
+        addHomeTrans.replace(R.id.main_framelayout, HomeFragment.newInstance())
+        addHomeTrans.commit()
+
         //Create BottomNavigationView, disable shift mode, then set item selected listener
-        val bottomNavigationView = findViewById(R.id.navigation) as BottomNavigationView
+        val bottomNavigationView = navigation as BottomNavigationView
         disableShiftMode(bottomNavigationView)
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             val transaction = fragmentManager.beginTransaction()
