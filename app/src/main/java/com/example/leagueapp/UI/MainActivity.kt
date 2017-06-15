@@ -27,9 +27,9 @@ class MainActivity : AppCompatActivity() {
             transaction.replace(R.id.main_framelayout,
                     when (item.itemId) {
                         R.id.action_home -> HomeFragment.newInstance()
-                        R.id.action_champs -> HomeFragment.newInstance()
-                        R.id.action_items -> HomeFragment.newInstance()
-                        R.id.action_search -> HomeFragment.newInstance()
+                        R.id.action_champs -> ChampsFragment.newInstance()
+                        R.id.action_items -> ItemsFragment.newInstance()
+                        R.id.action_search -> SearchFragment.newInstance()
                         else -> run {Log.d(TAG,"what"); null}
                     }
             )
