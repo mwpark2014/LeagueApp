@@ -1,4 +1,4 @@
-package com.example.leagueapp.UI
+package com.example.leagueapp.ui
 
 import android.app.Fragment
 import android.os.Bundle
@@ -20,7 +20,7 @@ class ItemsFragment : Fragment() {
         return rootView
     }
     companion object{
-        val TAG = "ItemsFragment"
+        const val TAG = "ItemsFragment"
         @JvmStatic fun newInstance(): ItemsFragment {
            return ItemsFragment()
         }

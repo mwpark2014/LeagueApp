@@ -1,4 +1,4 @@
-package com.example.leagueapp.UI
+package com.example.leagueapp.ui
 
 import android.app.Fragment
 import android.os.Bundle
@@ -11,18 +11,18 @@ import com.example.leagueapp.R
  * Created by Mason on 6/12/2017.
  */
 
-class SearchFragment : Fragment() {
+class ChampsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?
                               , savedInstanceState: Bundle?): View? {
-        val rootView = inflater.inflate(R.layout.search_fragment, container, false)
+        val rootView = inflater.inflate(R.layout.champs_fragment, container, false)
         rootView.tag = TAG
 
         return rootView
     }
     companion object{
-        val TAG = "SearchFragment"
-        @JvmStatic fun newInstance(): SearchFragment {
-           return SearchFragment()
+        const val TAG = "ChampsFragment"
+        @JvmStatic fun newInstance(): ChampsFragment {
+           return ChampsFragment()
         }
     }
 }

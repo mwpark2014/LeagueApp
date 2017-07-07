@@ -1,6 +1,5 @@
-package com.example.leagueapp.UI
+package com.example.leagueapp.ui
 
-import android.app.Fragment
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -33,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                         R.id.action_champs -> ChampsFragment.newInstance()
                         R.id.action_items -> ItemsFragment.newInstance()
                         R.id.action_search -> SearchFragment.newInstance()
-                        else -> run {Log.d(TAG,"what"); null}
+                        else -> run {Log.d(TAG,"Unidentified Action"); null}
                     }
             )
             transaction.commit()
