@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LeagueApp</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_champs">Champions</string>
+    <string name="menu_items">Items</string>
+    <string name="menu_search">Search</string>
 </resources>
